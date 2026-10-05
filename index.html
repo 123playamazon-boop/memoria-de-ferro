@@ -548,8 +548,8 @@ if(x)x.onclick=closeStudy;if(b)b.onclick=closeStudy;
 if(m)m.addEventListener('click',function(e){if(e.target===m)closeStudy();});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeStudy();});})();
 /* ===== CHECKOUT (Cakto) — TROCAR pelos links reais no deploy ===== */
-var CHECKOUT_BASE="COLE_LINK_CAKTO_BASE";   // R$34,99
-var CHECKOUT_BUMP="COLE_LINK_CAKTO_BUMP";   // R$34,99 + Deluxe (ou base, se não usar bump)
+var CHECKOUT_BASE="https://pay.cakto.com.br/8o5qoyw_1174808";   // R$34,99
+var CHECKOUT_BUMP="https://pay.cakto.com.br/8o5qoyw_1174808";   // R$34,99 + Deluxe (ou base, se não usar bump)
 function dmcChecked(){var c=document.getElementById('bumpchk');return !!(c&&c.checked);}
 function dmcSync(){var ck=dmcChecked();var url=ck?CHECKOUT_BUMP:CHECKOUT_BASE;document.querySelectorAll('[data-checkout]').forEach(function(a){a.href=url;});var bt=document.getElementById('bumptotal');if(bt)bt.style.display=ck?'block':'none';var sp=document.getElementById('stickyNow');if(sp)sp.textContent=ck?'R$61,99':'R$34,99';}
 (function(){var c=document.getElementById('bumpchk');if(c)c.addEventListener('change',dmcSync);dmcSync();})();
